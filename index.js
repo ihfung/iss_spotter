@@ -34,12 +34,12 @@ fetchISSFlyOverTimes({ latitude: '49.27670', longitude: '-123.13000' }, (error, 
   console.log('It worked! Returned fly over times:' , flyOver);
 });
 */
-const printPassTimes = function(passTimes) {
-  for (const pass of passTimes) {
-    const datetime = new Date(0);
-    datetime.setUTCSeconds(pass.risetime);
-    const duration = pass.duration;
-    console.log(`Next pass at ${datetime} for ${duration} seconds!`);
+const printPassTimes = function(passTimes) { //passTimes function takes an array of objects
+  for (const pass of passTimes) { //iterate through the array of objects
+    const datetime = new Date(0); //create a new date object
+    datetime.setUTCSeconds(pass.risetime); //set the date object to the risetime
+    const duration = pass.duration; //get the duration from the object
+    console.log(`Next pass at ${datetime} for ${duration} seconds!`); //print the date and duration
   }
 };
 
