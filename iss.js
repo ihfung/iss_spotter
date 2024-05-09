@@ -11,7 +11,8 @@ const needle = require('needle');
 const fetchCoordsByIP = function(ip, callback) {
   //In the function, make the request to the API, and have it pass back the relevant (lat/lng) data as an object via callback.
   needle.get(`http://ipwho.is/${ip}`, (error, response, body) => {
-  //make a get request to the freegeoip API
+  //make a get request to the ipwhois API
+  //response is doing the same thing which is the response from the API
     // inside the request callback ...
     if (error) {
       callback(error, null); //pass the error to the callback function
